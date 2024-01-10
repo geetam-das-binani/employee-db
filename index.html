@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Employeee Db</h1>
+        <div>
+          <button class="editEmployee__btn">Edit Employee</button>
+          <button class="createEmployee">Add a Employee</button>
+        </div>
+      </header>
+    </div>
+    <div class="employees">
+      <div class="employees__names">
+        <span class="employees__names--title"> Employee List </span>
+        <div class="employees__names--list"></div>
+      </div>
+      <div class="employees__single">
+        <span class="employess__single--title"> Employee Information </span>
+        <div class="employess__single--info"></div>
+      </div>
+    </div>
+
+    <!-- Add employee modal  -->
+    <div class="addEmployee">
+      <form class="addEmployee__create">
+        Add New Employee
+        <div>
+          <input
+            type="text"
+            placeholder="FirstName"
+            name="firstName"
+            required
+          />
+          <input type="text" placeholder="LastName" name="lastName" required />
+        </div>
+        <input type="text" placeholder="Image URL( OPtional)" name="imageUrl" />
+
+        <input
+          type="number"
+          placeholder="contact number"
+          name="contactNumber"
+          required
+        />
+        <input type="number" placeholder="salary" name="salary" required />
+
+        <input type="email" placeholder="Email" name="email" required />
+        <input type="text" placeholder="Address" name="address" required />
+        <input
+          type="date"
+          placeholder="Date of Birth"
+          class="addEmployee__create--dob"
+          name="dob"
+          required
+        />
+
+        <input
+          type="submit"
+          class="addEmployee__create--submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+
+    <!-- Edit Employee modal  -->
+    <div class="editEmployee">
+      <form class="editEmployee__create">
+        Edit Employee
+        <div>
+          <input
+            type="text"
+            placeholder="FirstName"
+            name="firstName"
+            required
+            id="firstname"
+          />
+          <input type="text"
+          id="lastname"
+          placeholder="LastName" name="lastName" required />
+        </div>
+        <input 
+        id="imageUrl"
+        type="text" placeholder="Image URL( OPtional)" name="imageUrl" />
+
+        <input
+          type="number"
+          placeholder="contact number"
+          name="contactNumber"
+          id="contactNumber"
+          required
+        />
+        <input type="number"
+        id="salary"
+        placeholder="salary" name="salary" required />
+
+        <input type="email" 
+        id="email"
+        placeholder="Email" name="email" required />
+        <input 
+        id="address"
+        type="text" placeholder="Address" name="address" required />
+        <input
+          type="date"
+          placeholder="Date of Birth"
+          class="editEmployee__create--dob"
+          name="dob"
+          required
+          
+          id="dob"
+        />
+
+        <input
+          type="submit"
+          class="editEmployee__create--submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+  </body>
+</html>

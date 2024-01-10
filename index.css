@@ -1,0 +1,155 @@
+body {
+  padding: 0;
+  font-family: sans-serif;
+}
+:root {
+  --btn: #dbdbdb;
+  --btn-hover: #cacaca;
+  --item-bg: #f0f0f0;
+  --modal-bg: rgba(141, 141, 141, 0.541);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header  div > button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  background: var(--btn);
+  border-radius: 20px;
+}
+header > button:hover {
+  background: var(--btn-hover);
+}
+.employees {
+  display: flex;
+}
+.employees > div {
+  height: 450px;
+  overflow-y: scroll;
+  border: 1px solid black;
+}
+.employees__names {
+  width: 30%;
+}
+.employees__single {
+  width: 70%;
+}
+.employees__names,
+.employees__single {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.employees__names--title,
+.employess__single--title {
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.employees__names--list {
+  display: flex;
+  flex-direction: column;
+}
+.employees__names--item {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  text-align: center;
+  background: var(--item-bg);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.employees__names--item:hover,
+.selected {
+  background: var(--btn);
+}
+.employess__single--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.employee__single--heading {
+  text-transform: uppercase;
+  padding: 5px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.employess__single--info > img {
+  object-fit: contain;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.addEmployee{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+justify-content: center;
+  align-items: center;
+  background: var(--modal-bg);
+  display: none;
+}
+.editEmployee {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+justify-content: center;
+  align-items: center;
+  background: var(--modal-bg);
+ display: none;
+}
+.addEmployee__create,.editEmployee__create {
+  width: 400px;
+  background: white;
+  box-shadow: 0 0 50px gray;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addEmployee__create > div ,.editEmployee__create> div{
+  display: grid;
+  grid-template-columns: 48.1% 48.1%;
+  column-gap: 15px;
+}
+.addEmployee__create input,.editEmployee__create  input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(236, 236, 236);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.addEmployee__create--submit ,.editEmployee__create--submit {
+  padding: 10px !important;
+  border-radius: 5px;
+  border: none;
+  background: var(--btn);
+  cursor: pointer;
+}
+.addEmployee__create--submit:hover ,.editEmployee__create--submit:hover{
+  background: var(--btn-hover);
+}
